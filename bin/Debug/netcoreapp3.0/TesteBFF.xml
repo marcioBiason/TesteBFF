@@ -102,7 +102,27 @@
         </member>
         <member name="P:Teste.BFF.EF.BancoDadosContext.Usuarios">
             <summary>
-            Tabela que contem as colunas de acordo com Layout, Tipo de Registro, etc...
+            Tabela que contem os Usuarios;
+            </summary>
+        </member>
+        <member name="P:Teste.BFF.EF.BancoDadosContext.Sexos">
+            <summary>
+            Tabela que contem os Sexos;
+            </summary>
+        </member>
+        <member name="T:Teste.BFF.v1.Models.Sexo">
+            <summary>
+            Classe de Sexos
+            </summary>
+        </member>
+        <member name="P:Teste.BFF.v1.Models.Sexo.SexoId">
+            <summary>
+            Id do Sexo
+            </summary>
+        </member>
+        <member name="P:Teste.BFF.v1.Models.Sexo.Descricao">
+            <summary>
+            //Descricao do Sexo com tamanho maximo de 15 caracteres;
             </summary>
         </member>
         <member name="T:Teste.BFF.v1.Models.Usuario">
@@ -244,21 +264,6 @@
              <summary>
             GetUserAsyncByID
              </summary>
-        </member>
-        <member name="T:Teste.v1.Models.Sexo">
-            <summary>
-            Classe de Sexos
-            </summary>
-        </member>
-        <member name="P:Teste.v1.Models.Sexo.SexoId">
-            <summary>
-            Id do Sexo
-            </summary>
-        </member>
-        <member name="P:Teste.v1.Models.Sexo.Descricao">
-            <summary>
-            //Descricao do Sexo com tamanho maximo de 15 caracteres;
-            </summary>
         </member>
     </members>
 </doc>

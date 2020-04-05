@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.AspNetCore.Mvc.Versioning;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -59,8 +60,8 @@ namespace TesteBFF {
                     .AllowCredentials ();
             }));
 
-            //services.AddDbContext<BancoDadosContext> (
-            //x => x.UseSqlLite (Configuration.GetConnectionString ("")));            
+            services.AddDbContext<BancoDadosContext> (
+                x => x.UseSqlite (Configuration["ConnectionString:DefaultConnection"]));
 
             //services.AddScoped<IUsuarioService, UsuarioService> ();
 

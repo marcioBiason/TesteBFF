@@ -12,8 +12,13 @@ namespace Teste.BFF.EF {
         public BancoDadosContext (DbContextOptions options) : base (options) { }
 
         /// <summary>
-        /// Tabela que contem as colunas de acordo com Layout, Tipo de Registro, etc...
+        /// Tabela que contem os Usuarios;
         /// </summary>
         public DbSet<Usuario> Usuarios { get; set; }
+
+        /// <summary>
+        /// Tabela que contem os Sexos;
+        /// </summary>
+        public DbSet<Sexo> Sexos { get; set; }
     }
 }

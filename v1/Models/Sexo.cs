@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Teste.v1.Models {
+namespace Teste.BFF.v1.Models {
     /// <summary>
     /// Classe de Sexos
     /// </summary>
