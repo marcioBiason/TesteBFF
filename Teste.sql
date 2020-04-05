@@ -24,3 +24,7 @@ CREATE INDEX "IX_Usuarios_SexoId" ON "Usuarios" ("SexoId");
 INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
 VALUES ('20200405015846_init', '3.1.3');
 
+
+INSERT INTO "Sexos" VALUES ('1', 'MASCULINO');
+INSERT INTO "Sexos" VALUES ('2', 'FEMININO');
+

@@ -104,10 +104,9 @@ namespace Teste.BFF.v1.Services {
         /// </summary>
         public async Task<Usuario[]> GetAllUsersAsync () {
             IQueryable<Usuario> query = _context.Usuarios;
-
+            
             query = query.AsNoTracking ()
                 .OrderBy (c => c.Email);
-
             return await query.ToArrayAsync ();
         }
 

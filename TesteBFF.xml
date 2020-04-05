@@ -21,6 +21,29 @@
             </summary>
             <param name="options"></param>
         </member>
+        <member name="T:TesteBFF.Migrations.init">
+            <summary>
+            init migration
+            </summary>
+        </member>
+        <member name="M:TesteBFF.Migrations.init.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            Up
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:TesteBFF.Migrations.init.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            down
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:TesteBFF.Migrations.init.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            BuildTargetModel
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
         <member name="T:TesteBFF.Program">
             <summary>
             Program

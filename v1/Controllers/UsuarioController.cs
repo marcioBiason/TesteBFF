@@ -31,7 +31,6 @@ namespace TesteBFF.v1.Controllers {
         public async Task<IActionResult> Get () {
             try {
                 var results = await _repo.GetAllUsersAsync ();
-
                 return Ok (results);
             } catch (System.Exception) {
                 return this.StatusCode (StatusCodes.Status500InternalServerError, "Database error");
