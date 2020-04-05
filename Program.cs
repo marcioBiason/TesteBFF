@@ -60,7 +60,7 @@ namespace TesteBFF
                     var env = host.HostingEnvironment;
                     var currentDirectoryPath = Directory.GetCurrentDirectory();
                     config.SetBasePath(env.ContentRootPath);
-                    config.AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
+                    //config.AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
                     config.AddEnvironmentVariables();
                 }
                 )

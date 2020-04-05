@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 using Teste.BFF.v1.Services;
 
 namespace TesteBFF.v1.Controllers {
+    /// <summary>
+    /// Controller de Usuarios;
+    /// </summary>
     [ApiVersion ("1.0")]
     [ApiController]
     [Route ("v{version:apiVersion}/[controller]")]

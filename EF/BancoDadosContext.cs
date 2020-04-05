@@ -15,10 +15,5 @@ namespace Teste.BFF.EF {
         /// Tabela que contem as colunas de acordo com Layout, Tipo de Registro, etc...
         /// </summary>
         public DbSet<Usuario> Usuarios { get; set; }
-
-        /// <summary>
-        /// On Configuring;
-        /// </summary>
-        protected override void OnConfiguring (DbContextOptionsBuilder optionsBuilder) { }
     }
 }

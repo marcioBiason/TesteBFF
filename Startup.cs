@@ -60,9 +60,9 @@ namespace TesteBFF {
             }));
 
             //services.AddDbContext<BancoDadosContext> (
-            //options => options.UseSqlServer (appSettings.Connection));
+            //x => x.UseSqlLite (Configuration.GetConnectionString ("")));            
 
-            services.AddScoped<IUsuarioService, UsuarioService> ();
+            //services.AddScoped<IUsuarioService, UsuarioService> ();
 
             #region Configure JWT
             services.AddAuthentication (options => {
