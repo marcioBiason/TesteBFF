@@ -64,6 +64,7 @@ namespace TesteBFF {
                 x => x.UseSqlite (Configuration["ConnectionString:DefaultConnection"]));
 
             services.AddScoped<IUsuarioService, UsuarioService> ();
+            services.AddScoped<ISexoService, SexoService> ();
 
             #region Configure JWT
             services.AddAuthentication (options => {
@@ -157,8 +158,8 @@ namespace TesteBFF {
 
             app.UseAuthentication ();
             app.UseAuthorization ();
-
-            app.UseCors ("InternalPolicy");
+            app.UseCors (x => x.AllowAnyOrigin ().AllowAnyMethod ().AllowAnyHeader ());
+            //app.UseMvc ();
 
             app.UseEndpoints (endpoints => {
                 endpoints.MapControllers ();

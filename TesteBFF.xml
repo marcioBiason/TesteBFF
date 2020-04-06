@@ -93,6 +93,41 @@
             <param name="provider"></param>
             <param name="env"></param>
         </member>
+        <member name="T:TesteBFF.v1.Controllers.SexoController">
+            <summary>
+            Controller de Usuarios;
+            </summary>
+        </member>
+        <member name="F:TesteBFF.v1.Controllers.SexoController._repo">
+            <summary>
+            Context
+            </summary>
+        </member>
+        <member name="M:TesteBFF.v1.Controllers.SexoController.#ctor(Teste.BFF.v1.Services.ISexoService)">
+            <summary>
+            context
+            </summary>
+        </member>
+        <member name="M:TesteBFF.v1.Controllers.SexoController.Get">
+            <summary>
+            Get Sexos
+            </summary>
+        </member>
+        <member name="M:TesteBFF.v1.Controllers.SexoController.GetId(System.Int32)">
+            <summary>
+            Get UsuariosById
+            </summary>
+        </member>
+        <member name="M:TesteBFF.v1.Controllers.SexoController.Post(Teste.BFF.v1.Models.Sexo)">
+            <summary>
+            Post Sexos
+            </summary>
+        </member>
+        <member name="M:TesteBFF.v1.Controllers.SexoController.Delete(System.Int32)">
+            <summary>
+            Delete User
+            </summary>
+        </member>
         <member name="T:TesteBFF.v1.Controllers.UsuarioController">
             <summary>
             Controller de Usuarios;
@@ -111,6 +146,31 @@
         <member name="M:TesteBFF.v1.Controllers.UsuarioController.Get">
             <summary>
             Get Users
+            </summary>
+        </member>
+        <member name="M:TesteBFF.v1.Controllers.UsuarioController.GetId(System.Int32)">
+            <summary>
+            Get UsuariosById
+            </summary>
+        </member>
+        <member name="M:TesteBFF.v1.Controllers.UsuarioController.GetUsuariosAtivos(System.String)">
+            <summary>
+            Get UsuariosById
+            </summary>
+        </member>
+        <member name="M:TesteBFF.v1.Controllers.UsuarioController.Post(Teste.BFF.v1.Models.Usuario)">
+            <summary>
+            Post Usuario
+            </summary>
+        </member>
+        <member name="M:TesteBFF.v1.Controllers.UsuarioController.Put(System.Int32,Teste.BFF.v1.Models.Usuario)">
+            <summary>
+            Put Usuario
+            </summary>
+        </member>
+        <member name="M:TesteBFF.v1.Controllers.UsuarioController.Delete(System.Int32)">
+            <summary>
+            Put Usuario
             </summary>
         </member>
         <member name="T:Teste.BFF.EF.BancoDadosContext">
@@ -193,6 +253,96 @@
             Id do File
             </summary>
         </member>
+        <member name="M:Teste.BFF.v1.Models.Usuario.#ctor">
+            <summary>
+            Passando Data Autual
+            </summary>
+        </member>
+        <member name="T:Teste.BFF.v1.Services.ISexoService">
+            <summary>
+            Interface User Service
+            </summary>
+        </member>
+        <member name="M:Teste.BFF.v1.Services.ISexoService.Add``1(``0)">
+            <summary>
+            Add
+            </summary>
+        </member>
+        <member name="M:Teste.BFF.v1.Services.ISexoService.Update``1(``0)">
+            <summary>
+            Update
+            </summary>
+        </member>
+        <member name="M:Teste.BFF.v1.Services.ISexoService.Delete``1(``0)">
+            <summary>
+            Delete
+            </summary>
+        </member>
+        <member name="M:Teste.BFF.v1.Services.ISexoService.SaveChangesAsync">
+            <summary>
+            Save
+            </summary>
+        </member>
+        <member name="M:Teste.BFF.v1.Services.ISexoService.GetAllSexosAsync">
+            <summary>
+            Get Users
+            </summary>
+        </member>
+        <member name="M:Teste.BFF.v1.Services.ISexoService.GetSexoByIdAsync(System.Int32)">
+            <summary>
+            GetUserById
+            </summary>
+        </member>
+        <member name="T:Teste.BFF.v1.Services.SexoService">
+            <summary>
+            Classe UserService
+            </summary>
+        </member>
+        <member name="F:Teste.BFF.v1.Services.SexoService._context">
+            <summary>
+            IntegradorSaudeBDContext
+            </summary>
+        </member>
+        <member name="F:Teste.BFF.v1.Services.SexoService._configuration">
+            <summary>
+            IntegradorSaudeBDContext
+            </summary>
+        </member>
+        <member name="M:Teste.BFF.v1.Services.SexoService.#ctor(Teste.BFF.EF.BancoDadosContext,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            IntegradorSaudeBDContext
+            </summary>
+        </member>
+        <member name="M:Teste.BFF.v1.Services.SexoService.Add``1(``0)">
+            <summary>
+            Add
+            </summary>
+        </member>
+        <member name="M:Teste.BFF.v1.Services.SexoService.Update``1(``0)">
+            <summary>
+            Update
+            </summary>
+        </member>
+        <member name="M:Teste.BFF.v1.Services.SexoService.Delete``1(``0)">
+            <summary>
+            Delete
+            </summary>
+        </member>
+        <member name="M:Teste.BFF.v1.Services.SexoService.SaveChangesAsync">
+             <summary>
+            Save
+             </summary>
+        </member>
+        <member name="M:Teste.BFF.v1.Services.SexoService.GetAllSexosAsync">
+             <summary>
+            GetUsers
+             </summary>
+        </member>
+        <member name="M:Teste.BFF.v1.Services.SexoService.GetSexoByIdAsync(System.Int32)">
+             <summary>
+            GetUserAsyncByID
+             </summary>
+        </member>
         <member name="T:Teste.BFF.v1.Services.IUsuarioService">
             <summary>
             Interface User Service
@@ -223,14 +373,14 @@
             Get Users
             </summary>
         </member>
-        <member name="M:Teste.BFF.v1.Services.IUsuarioService.GetUserByEmail(System.String)">
-            <summary>
-            GetUserByEmail
-            </summary>
-        </member>
         <member name="M:Teste.BFF.v1.Services.IUsuarioService.GetUserByIdAsync(System.Int32)">
             <summary>
             GetUserById
+            </summary>
+        </member>
+        <member name="M:Teste.BFF.v1.Services.IUsuarioService.GetUsuariosAtivos(System.String)">
+            <summary>
+            Get Users
             </summary>
         </member>
         <member name="T:Teste.BFF.v1.Services.UsuarioService">
@@ -278,7 +428,7 @@
             GetUsers
              </summary>
         </member>
-        <member name="M:Teste.BFF.v1.Services.UsuarioService.GetUserByEmail(System.String)">
+        <member name="M:Teste.BFF.v1.Services.UsuarioService.GetUsuariosAtivos(System.String)">
              <summary>
             GetUserAsyncByEmail
              </summary>

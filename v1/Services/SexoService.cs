@@ -12,7 +12,7 @@ namespace Teste.BFF.v1.Services {
     /// <summary>
     /// Interface User Service
     /// </summary>
-    public interface IUsuarioService {
+    public interface ISexoService {
         /// <summary>
         /// Add
         /// </summary>
@@ -36,23 +36,18 @@ namespace Teste.BFF.v1.Services {
         /// <summary>
         /// Get Users
         /// </summary>
-        Task<IEnumerable<object>> GetAllUsersAsync ();
+        Task<Sexo[]> GetAllSexosAsync ();
 
         /// <summary>
         /// GetUserById
         /// </summary>
-        Task<Usuario> GetUserByIdAsync (int id);
-
-        /// <summary>
-        /// Get Users
-        /// </summary>
-        Task<Usuario[]> GetUsuariosAtivos (string ativo);
+        Task<Sexo> GetSexoByIdAsync (int id);
 
     }
     /// <summary>
     /// Classe UserService
     /// </summary>
-    public class UsuarioService : IUsuarioService {
+    public class SexoService : ISexoService {
 
         /// <summary>
         /// IntegradorSaudeBDContext
@@ -67,7 +62,7 @@ namespace Teste.BFF.v1.Services {
         /// <summary>
         /// IntegradorSaudeBDContext
         /// </summary>
-        public UsuarioService (BancoDadosContext context, IConfiguration configuration) {
+        public SexoService (BancoDadosContext context, IConfiguration configuration) {
             _context = context;
             _context.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
             _configuration = configuration;
@@ -102,42 +97,21 @@ namespace Teste.BFF.v1.Services {
         /// <summary>
         ///GetUsers
         /// </summary>
-        public async Task<IEnumerable<object>> GetAllUsersAsync () {
-            var query = await (from u in _context.Usuarios join s in _context.Sexos on u.SexoId equals s.SexoId select new {
-                    userId = u.UserId,
-                        nome = u.Nome,
-                        dataNascimento = u.DataNascimento,
-                        email = u.Email,
-                        sexoId = s.Descricao,
-                        ativo = u.Ativo
-                }).OrderBy (f => f.userId)
-                .ToArrayAsync ();
-            return query;
-        }
+        public async Task<Sexo[]> GetAllSexosAsync () {
+            IQueryable<Sexo> query = _context.Sexos;
 
-        /// <summary>
-        ///GetUserAsyncByEmail
-        /// </summary>
-        public async Task<Usuario[]> GetUsuariosAtivos (string ativo) {
-            IQueryable<Usuario> query = _context.Usuarios;
-            bool filtro = true;
-            if (ativo != "Ativo") {
-                filtro = false;
-            }
-            query = query.AsNoTracking ()
-                .Where (c => c.Ativo == filtro)
-                .OrderBy (c => c.UserId);
+            query = query.AsNoTracking ();
             return await query.ToArrayAsync ();
         }
 
         /// <summary>
         ///GetUserAsyncByID
         /// </summary>
-        public async Task<Usuario> GetUserByIdAsync (int id) {
-            IQueryable<Usuario> query = _context.Usuarios;
+        public async Task<Sexo> GetSexoByIdAsync (int id) {
+            IQueryable<Sexo> query = _context.Sexos;
 
             query = query.AsNoTracking ()
-                .Where (c => c.UserId == id);
+                .Where (c => c.SexoId == id);
             return await query.FirstOrDefaultAsync ();
         }
     }

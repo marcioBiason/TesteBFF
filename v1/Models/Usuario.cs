@@ -50,5 +50,13 @@ namespace Teste.BFF.v1.Models {
         /// </summary>
         [ForeignKey ("SexoId")]
         public Sexo Sexo { get; set; }
+
+        /// <summary>
+        /// Passando Data Autual
+        /// </summary>
+        public Usuario () {
+            //SexoId = 1;
+            Ativo = true;
+        }
     }
 }
